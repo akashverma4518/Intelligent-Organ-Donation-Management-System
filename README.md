@@ -1,111 +1,53 @@
-# Intelligent Organ Donation Management System
+# 🫀 Intelligent Organ Donation Management System
+
+> An Object-Oriented based system for managing donors, recipients, organs, hospitals, donor–recipient matching and transplant records in a structured, secure and traceable manner.
+
+---
 
 ## 📌 Project Overview
 
-The **Intelligent Organ Donation Management System** is an object-oriented software system designed to manage the organ donation workflow in a structured, secure, and traceable manner.
+The **Intelligent Organ Donation Management System** is a capstone project developed for the **Object Oriented Techniques and Systems (OOTS)** course.
 
-The system focuses on:
+The project aims to model the real-world organ donation and transplantation workflow using **Object-Oriented Programming and Design principles**.
 
-- Donor registration
-- Recipient management
-- Organ availability management
-- Donor–recipient matching
-- Hospital and transplant coordination
-- Transplant record management
-- Validation and exception handling
+The system brings together important entities involved in organ transplantation, including:
 
-The project applies **Object-Oriented Techniques and Systems (OOTS)** concepts to model real-world organ donation entities as software classes and objects.
+- Donors
+- Recipients
+- Organs
+- Hospitals
+- Transplant Coordinators
+- Users
+- Matching Results
+- Transplant Records
 
----
+The proposed system is designed to provide a structured workflow for managing donor and recipient information, maintaining organ availability, performing compatibility-based donor–recipient matching, and maintaining transplant records.
 
-## 🎯 Problem Statement
+The project particularly focuses on applying OOTS concepts such as:
 
-Organ donation involves multiple entities such as donors, recipients, organs, hospitals, transplant coordinators, and transplant records.
-
-Managing these entities manually or through disconnected systems can make it difficult to:
-
-- Maintain structured donor and recipient information
-- Track available organs
-- Identify compatible donor–recipient pairs
-- Maintain secure medical information
-- Coordinate hospitals and transplant teams
-- Maintain traceable transplant records
-
-The proposed system provides an object-oriented approach to organize these processes and support compatibility-based donor–recipient matching.
+**Classes & Objects → Encapsulation → Abstraction → Inheritance → Polymorphism → Association → Aggregation → Composition → Exception Handling**
 
 ---
 
-## 🎯 Objectives
+# 🎯 Problem Statement
 
-The major objectives of the project are:
+Organ donation involves multiple stakeholders and a large amount of sensitive information.
 
-1. Analyse the organ-donation workflow using object-oriented concepts.
-2. Design classes for Donor, Recipient, Organ, Hospital, MatchResult and TransplantRecord.
-3. Apply encapsulation, abstraction, inheritance and polymorphism.
-4. Develop an intelligent donor–recipient matching module.
-5. Represent relationships using UML and object-oriented design concepts.
-6. Provide secure and traceable decision-support information.
-7. Validate user and medical information before processing.
-8. Handle incomplete, invalid and incompatible records safely.
-
----
-
-## 👥 Target Users / Stakeholders
-
-The system is designed for the following stakeholders:
-
-- **Donors** – Provide donation information and consent.
-- **Recipients** – Maintain waiting-list and medical information.
-- **Transplant Coordinators** – Review matches and coordinate allocation.
-- **Hospitals / Medical Teams** – Manage organ and transplant records.
-- **System Administrators** – Manage users, security and records.
-- **Development Team** – Design, test and maintain the system.
-
----
-
-# 🧑‍💻 Object-Oriented Design
-
-The project applies the following OOTS concepts.
-
-## Classes and Objects
-
-The major classes identified for the system are:
-
-- `Donor`
-- `Recipient`
-- `Organ`
-- `Hospital`
-- `MatchResult`
-- `TransplantRecord`
-- `User`
-
-These classes represent the major real-world entities involved in organ donation.
-
----
-
-## 🔒 Encapsulation
-
-Encapsulation is used to protect sensitive donor, recipient and medical information.
-
-Data is accessed and modified through controlled methods instead of allowing unrestricted access.
-
----
-
-## 🎭 Abstraction
-
-Complex operations such as donor–recipient matching and organ allocation are hidden behind simplified interfaces.
-
-This allows users to interact with the system without needing to understand the internal implementation of the matching process.
-
----
-
-## 🧬 Inheritance
-
-Inheritance can be used to represent specialized entities.
-
-For example:
+A typical organ donation workflow involves:
 
 ```text
 Donor
-├── LivingDonor
-└── DeceasedDonor
+   ↓
+Donation Information
+   ↓
+Organ Availability
+   ↓
+Recipient Waiting List
+   ↓
+Compatibility / Matching
+   ↓
+Transplant Coordinator
+   ↓
+Hospital / Medical Team
+   ↓
+Transplant Record
