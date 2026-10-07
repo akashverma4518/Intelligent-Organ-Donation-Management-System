@@ -1,81 +1,32 @@
-# 🫀 Intelligent Organ Donation Management System
+# Intelligent Organ Donation Management System
 
-<p align="center">
+## Object Oriented Techniques and Systems (OOTS)
 
-### An Object-Oriented Decision-Support and Management System for Organ Donation
-
-**Object Oriented Techniques and Systems (OOTS) | Capstone Project**
-
-</p>
+**A Capstone Project for Managing Organ Donation, Donor–Recipient Matching and Transplant Records**
 
 ---
 
-## 📌 Table of Contents
+## 1. Project Overview
 
-- [Project Overview](#-project-overview)
-- [Problem Statement](#-problem-statement)
-- [Problem Context](#-problem-context)
-- [Problem Identification](#-problem-identification)
-- [Project Objectives](#-project-objectives)
-- [Target Users and Stakeholders](#-target-users-and-stakeholders)
-- [Proposed Solution](#-proposed-solution)
-- [System Workflow](#-system-workflow)
-- [Major System Components](#-major-system-components)
-- [Core Classes](#-core-classes)
-- [Object-Oriented Concepts Applied](#-object-oriented-concepts-applied)
-- [Class and Object Design](#-class-and-object-design)
-- [Encapsulation](#-encapsulation)
-- [Abstraction](#-abstraction)
-- [Inheritance](#-inheritance)
-- [Polymorphism](#-polymorphism)
-- [Association](#-association)
-- [Aggregation](#-aggregation)
-- [Composition](#-composition)
-- [Exception Handling](#-exception-handling)
-- [Donor–Recipient Matching](#-donorrecipient-matching)
-- [Methodology](#-methodology)
-- [Phase 1 Progress](#-phase-1-progress)
-- [Phase 2 Development](#-phase-2-development)
-- [Phase 2 Work Completed](#-phase-2-work-completed)
-- [Validation and Error Handling](#-validation-and-error-handling)
-- [Testing Strategy](#-testing-strategy)
-- [Interim Outcomes](#-interim-outcomes)
-- [Research and Literature Review](#-research-and-literature-review)
-- [Evidence and Supporting Material](#-evidence-and-supporting-material)
-- [Challenges Faced](#-challenges-faced)
-- [Corrective Actions](#-corrective-actions)
-- [Team Contributions](#-team-contributions)
-- [Project Progress](#-project-progress)
-- [Future Scope](#-future-scope)
-- [Final Review Plan](#-final-review-plan)
-- [SDG Alignment](#-sdg-alignment)
-- [Academic Information](#-academic-information)
-- [Project Status](#-project-status)
+The **Intelligent Organ Donation Management System** is a software-based capstone project developed as part of the **Object Oriented Techniques and Systems (OOTS)** course.
 
----
+The main purpose of this project is to design an organized system for managing the different entities and activities involved in the organ donation and transplantation process.
 
-# 🫀 Project Overview
-
-The **Intelligent Organ Donation Management System** is a capstone project developed as part of the **Object Oriented Techniques and Systems (OOTS)** course.
-
-The primary purpose of the project is to model and manage the major activities involved in the organ donation and transplantation workflow using **Object-Oriented Analysis and Design principles**.
-
-Organ transplantation involves several interconnected entities such as:
+Organ donation involves multiple entities such as:
 
 - Donors
 - Recipients
 - Organs
 - Hospitals
 - Transplant Coordinators
-- Users
+- System Users
 - Matching Results
 - Transplant Records
 
-Managing these entities requires a structured system in which each real-world entity can be represented as an object with clearly defined responsibilities.
+In a real-world environment, these entities are interconnected and require proper management of information and relationships.
 
-The proposed system therefore applies OOTS concepts such as:
+This project models these real-world entities as **classes and objects** and applies important Object-Oriented concepts such as:
 
-- Classes and Objects
 - Encapsulation
 - Abstraction
 - Inheritance
@@ -83,40 +34,104 @@ The proposed system therefore applies OOTS concepts such as:
 - Association
 - Aggregation
 - Composition
-- Object Interaction
-- UML Modelling
-- Validation
 - Exception Handling
 
-The system is designed to support the management of donor and recipient information, organ availability, compatibility-based matching and transplant records.
-
-> **Project Nature:** Academic capstone / decision-support and management system  
-> **Course:** Object Oriented Techniques and Systems (OOTS)  
-> **Current Phase:** Phase 2 – Development & Application
+The system also includes the concept of a **donor–recipient matching module**, which is intended to provide structured and traceable decision-support information for potential matches.
 
 ---
 
-# 🎯 Problem Statement
+# 2. Problem Statement
 
-Organ donation and transplantation involve multiple stakeholders and several interconnected processes.
+Organ donation and transplantation involve several stakeholders, processes and records.
 
-A typical workflow may involve:
+The major challenge is to maintain donor, recipient, organ, hospital and transplant information in a structured manner while also supporting the identification of suitable donor–recipient combinations.
+
+The system needs to address problems such as:
+
+- Maintaining donor information
+- Maintaining recipient information
+- Managing available organ information
+- Representing relationships between different entities
+- Handling different user responsibilities
+- Validating incomplete or incorrect records
+- Supporting donor–recipient compatibility matching
+- Maintaining transplant records
+- Protecting sensitive donor and recipient information
+- Making matching-related information explainable and traceable
+
+The **Intelligent Organ Donation Management System** proposes an object-oriented approach to organize these activities into separate but interconnected modules.
+
+---
+
+# 3. Project Objectives
+
+The major objectives of the project are:
+
+### 3.1 Donor Management
+To maintain structured information about donors and their donation-related details.
+
+### 3.2 Recipient Management
+To maintain recipient information and waiting-list related details.
+
+### 3.3 Organ Management
+To represent available organs and maintain their relevant information.
+
+### 3.4 Donor–Recipient Matching
+To develop a compatibility-based matching component that can identify potential donor–recipient pairs.
+
+### 3.5 Hospital Management
+To represent hospitals and their involvement in organ and transplant management.
+
+### 3.6 Transplant Record Management
+To maintain structured records related to transplant activities.
+
+### 3.7 Object-Oriented Design
+To apply OOTS concepts to a real-world healthcare-related problem.
+
+### 3.8 Data Protection
+To use encapsulation and controlled access for sensitive donor and recipient information.
+
+### 3.9 Validation and Exception Handling
+To handle missing, invalid, incomplete and incompatible information safely.
+
+### 3.10 Traceable Decision Support
+To make matching-related results structured, reviewable and traceable.
+
+---
+
+# 4. Target Users and Stakeholders
+
+The proposed system involves different stakeholders, each having different responsibilities.
+
+| Stakeholder | Responsibility |
+|---|---|
+| **Donor** | Provides donation information and consent |
+| **Recipient** | Maintains waiting-list and medical information |
+| **Transplant Coordinator** | Reviews potential matches and coordinates allocation |
+| **Hospital / Medical Team** | Manages organ and transplant-related information |
+| **System Administrator** | Manages users, access and system records |
+| **Development Team** | Designs, develops, tests and maintains the system |
+
+---
+
+# 5. Proposed Solution
+
+The proposed solution is an **Object-Oriented Organ Donation Management System** in which each major real-world entity is represented using a separate class.
+
+The system is structured around the following major entities:
 
 ```text
-Donor
-   ↓
-Donor Information & Consent
-   ↓
-Organ Information
-   ↓
-Organ Availability
-   ↓
-Recipient Waiting List
-   ↓
-Compatibility-Based Matching
-   ↓
-Transplant Coordinator Review
-   ↓
-Hospital / Medical Team
-   ↓
-Transplant Record
+User
+ |
+ +-------------------+
+ |                   |
+Donor             Recipient
+ |                   |
+ |                   |
+Organ           MatchResult
+ |                   |
+ +---------+---------+
+           |
+        Hospital
+           |
+    TransplantRecord
